@@ -3,19 +3,46 @@
 
 <head th:fragment="head">
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title th:text="${title}">Brickollect</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--    <style>
+        .affix {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
 
+        .affix + .container-fluid {
+            padding-top: 70px;
+        }
+    </style>-->
 </head>
-<body>
 
-    <nav th:fragment="navigation">
-        <a href="/login">Login</a> |
-        <a href="/register">Register</a>
+<body>
+<!--
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="75" th:fragment="navigation">
+-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" th:fragment="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Brickollect</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">SETS</a></li>
+                <li class="active"><a href="#">PARTS</a></li>
+                <li class="active"><a href="#">MOCS</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
     </nav>
+
 </body>
 </html>
